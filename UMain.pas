@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, StdCtrls, Grids, ValEdit, dxGDIPlusClasses;
+  Dialogs, ExtCtrls, StdCtrls, Grids, ValEdit, Vcl.Imaging.pngimage, System.UITypes;
 
 type
   TformMain = class(TForm)
@@ -64,6 +64,7 @@ end;
 procedure TformMain.FillMonitorsList;
 var
   currentMonitor: TMonitor;
+  i: integer;
 begin
   imageScreen1.Visible := false;
   imageScreen2.Visible := false;
@@ -72,7 +73,7 @@ begin
 
   if Screen.MonitorCount < 1 then
     exit;
-  currentMonitor := Screen.Monitors[0];
+  currentMonitor := Screen.PrimaryMonitor;
 //  lblMonitor1Name.Caption := currentMonitor.UnitName;
   lblMonitor1Descr.Caption := IntToStr(currentMonitor.Width) + ' x ' +
     IntToStr(currentMonitor.Height);
@@ -81,7 +82,14 @@ begin
 
   if Screen.MonitorCount < 2 then
     exit;
-  currentMonitor := Screen.Monitors[1];
+  for i := 0 to Screen.MonitorCount - 1 do
+  begin
+    if Screen.Monitors[i].Primary then
+      continue;
+    currentMonitor := Screen.Monitors[i];
+    break;
+  end;
+
   lblMonitor2Descr.Caption := IntToStr(currentMonitor.Width) + ' x ' +
     IntToStr(currentMonitor.Height);
   imageScreen2.Visible := true;
@@ -115,7 +123,7 @@ begin
   FillProcessesList;
   FillMonitorsList;
 
-  MoveToMonitor(1, Handle);
+  MoveToMonitor(Screen.PrimaryMonitor.MonitorNum + 1, Handle);
 end;
 
 procedure TformMain.FormCreate(Sender: TObject);

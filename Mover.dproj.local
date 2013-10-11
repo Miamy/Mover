@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2013.10.10 15:19:07.668,=C:\Users\Vadim\Documents\RAD Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2013.10.10 15:19:40.869,E:\Programs\UMain.dfm=C:\Users\Vadim\Documents\RAD Studio\Projects\Unit2.dfm</Transaction>
-    <Transaction>2013.10.10 15:19:40.869,E:\Programs\UMain.pas=C:\Users\Vadim\Documents\RAD Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2013.10.10 15:19:57.289,E:\Programs\Mover\Mover.dproj=C:\Users\Vadim\Documents\RAD Studio\Projects\Project2.dproj</Transaction>
-    <Transaction>2013.10.10 15:20:05.516,E:\Programs\Mover\UMain.dfm=E:\Programs\UMain.dfm</Transaction>
-    <Transaction>2013.10.10 15:20:05.516,E:\Programs\Mover\UMain.pas=E:\Programs\UMain.pas</Transaction>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.869,C:\Users\Vadim\Documents\RAD Studio\Projects\Unit2.pas=E:\Programs\UMain.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.869,C:\Users\Vadim\Documents\RAD Studio\Projects\Unit2.dfm=E:\Programs\UMain.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.516,E:\Programs\UMain.dfm=E:\Programs\Mover\UMain.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.516,E:\Programs\UMain.pas=E:\Programs\Mover\UMain.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.289,C:\Users\Vadim\Documents\RAD Studio\Projects\Project2.dproj=E:\Programs\Mover\Mover.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.668,=C:\Users\Vadim\Documents\RAD Studio\Projects\Unit2.pas</Transaction>
   </Transactions>
 </BorlandProject>
